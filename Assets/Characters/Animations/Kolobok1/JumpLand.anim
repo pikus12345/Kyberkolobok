@@ -143,6 +143,6 @@ AnimationClip:
     functionName: OnLand
     data: 
     objectReferenceParameter: {fileID: 0}
-    floatParameter: 1
+    floatParameter: 0
     intParameter: 0
     messageOptions: 0
