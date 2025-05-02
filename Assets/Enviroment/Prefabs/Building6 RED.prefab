@@ -22,7 +22,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: c20b2d1f9cbd47c4d839c691faf47012, type: 2}
     - target: {fileID: 5836143477174800127, guid: d6e56c917c42221459e0cbbc83849ab5, type: 3}
       propertyPath: m_Name
-      value: Building6 (1) Variant
+      value: Building6 RED
+      objectReference: {fileID: 0}
+    - target: {fileID: 6519131511866811641, guid: d6e56c917c42221459e0cbbc83849ab5, type: 3}
+      propertyPath: m_Convex
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9034929672502815085, guid: d6e56c917c42221459e0cbbc83849ab5, type: 3}
       propertyPath: m_LocalPosition.x
