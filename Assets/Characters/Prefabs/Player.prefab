@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 2838029920332808553}
   - component: {fileID: 2380677689331339242}
   - component: {fileID: 3747252091984113509}
+  - component: {fileID: 11052136328531314}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -207,10 +208,10 @@ MonoBehaviour:
   JumpHeight: 2
   Gravity: -15
   JumpTimeout: 0
-  FallTimeout: 0.15
+  FallTimeout: 0
   Grounded: 1
   GroundedOffset: 0.37
-  GroundedRadius: 0.14
+  GroundedRadius: 0.36
   GroundLayers:
     serializedVersion: 2
     m_Bits: 1
@@ -437,3 +438,15 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.4
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &11052136328531314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9142183716147882018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa6f359e29b01a04ebfb36ffb62c8f56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
