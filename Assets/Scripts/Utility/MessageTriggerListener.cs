@@ -6,7 +6,12 @@ public class MessageTriggerListener : MonoBehaviour
     {
         if (other.GetComponent<MessageTrigger>())
         {
-            MessageManager.instance.CreateMessage(other.GetComponent<MessageTrigger>().text);
+            MessageTrigger mt = other.GetComponent<MessageTrigger>();
+            MessageManager.instance.CreateMessage(mt.text);
+            if (mt.text == "NEXTLEVEL")
+            {
+
+            }
         }
     }
 }

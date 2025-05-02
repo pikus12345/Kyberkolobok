@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a952d84783dfcd642997124c1f5d17fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: "\u041F\u041E\u0428\u0401\u041B \u041D\u0410\u0425\u0423\u0419!"
+  text: "\u042D\u0442\u043E \u043F\u0435\u0447\u043A\u0438!"
 --- !u!33 &5633781165201590413
 MeshFilter:
   m_ObjectHideFlags: 0
