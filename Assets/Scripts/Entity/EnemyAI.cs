@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.InputSystem.XR;
 
 public class EnemyAI : MonoBehaviour
 {
@@ -10,6 +11,16 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] private float stoppingDistance = 1f; // Дистанция остановки перед игроком
     [SerializeField] private float SpeedChangeRate = 10.0f;
 
+    [Header("Звуки шагов")]
+    [SerializeField] private AudioClip[] FootstepAudioClips;
+    [Range(0f, 1f)][SerializeField] private float FootstepAudioVolume;
+
+    [Header("Атака")]
+    [SerializeField] private float attackRadius;
+    [SerializeField] private Transform attackPoint;
+    [SerializeField] private LayerMask playerLayer;
+
+    [Header("Патрулирование")]
     [SerializeField] private Transform[] patrolPoints;
     private int currentPatrolIndex = 0;
 
@@ -18,6 +29,8 @@ public class EnemyAI : MonoBehaviour
     private Vector3 startPosition; // Стартовая позиция для возврата
     private bool isChasing = false;
     private Animator animator;
+
+    
 
     private void Start()
     {
@@ -41,6 +54,10 @@ public class EnemyAI : MonoBehaviour
             isChasing = true;
             targetSpeed = chaseSpeed;
             agent.SetDestination(player.position);
+            if (agent.remainingDistance <= stoppingDistance)
+            {
+                Attack();
+            }
         }
         else
         {
@@ -65,6 +82,18 @@ public class EnemyAI : MonoBehaviour
         //{
         //    agent.isStopped = false;
         //}
+    }
+    private void Attack()
+    {
+        animator.SetTrigger("Attack");
+    }
+    private void OnAttack()
+    {
+        var v = Physics.CheckSphere(attackPoint.position,
+                attackRadius, playerLayer, QueryTriggerInteraction.Ignore);
+        if (v){
+            GameManager.instance.PlayerDeath();
+        }
     }
 
     // Проверка видимости игрока
@@ -98,5 +127,17 @@ public class EnemyAI : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, visionRadius);
+
+        Gizmos.DrawSphere(
+                attackPoint.position,
+                attackRadius);
+    }
+    private void OnFootstep()
+    {
+        if (FootstepAudioClips.Length > 0)
+        {
+            var index = Random.Range(0, FootstepAudioClips.Length);
+            AudioSource.PlayClipAtPoint(FootstepAudioClips[index], transform.position, FootstepAudioVolume);
+        }
     }
 }

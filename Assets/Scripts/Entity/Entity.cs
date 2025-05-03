@@ -38,17 +38,11 @@ public class Entity : MonoBehaviour
         isAlive = false;
         Debug.Log($"{name} умер!");
         if (animator != null)
-        {
             animator.SetTrigger("Death");
-        }
         if (GetComponent<EnemyAI>() != null)
-        {
             GetComponent<EnemyAI>().enabled = false;
-        }
-        if (GetComponent<EntityMovement>())
-        {
-            GetComponent<EntityMovement>().enabled = false;
-        }
+        if (GetComponent<Collider>())
+            GetComponent<Collider>().enabled = false;
     }
     private void TakeDamage(float damage)
     {
