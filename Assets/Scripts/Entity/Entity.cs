@@ -41,6 +41,10 @@ public class Entity : MonoBehaviour
         {
             animator.SetTrigger("Death");
         }
+        if (GetComponent<EnemyAI>() != null)
+        {
+            GetComponent<EnemyAI>().enabled = false;
+        }
         if (GetComponent<EntityMovement>())
         {
             GetComponent<EntityMovement>().enabled = false;
