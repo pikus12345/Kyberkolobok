@@ -13,6 +13,7 @@ public class BounceButton : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        Debug.Log("коснулс€");
         // ѕровер€ем, что столкнулс€ игрок
         if (collision.gameObject.CompareTag("Player"))
         {
