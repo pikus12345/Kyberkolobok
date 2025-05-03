@@ -1,0 +1,158 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1056840047128963074
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5653437510955934419}
+  m_Layer: 0
+  m_Name: Spawnpoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5653437510955934419
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1056840047128963074}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.42131713, y: 0.5678837, z: 0.5678837, w: 0.42131713}
+  m_LocalPosition: {x: -57.1, y: 35.7, z: 62}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8045239089200592190}
+  m_LocalEulerAnglesHint: {x: -90, y: 106.856, z: 0}
+--- !u!1 &3351823756936801480
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 919202345135894926}
+  m_Layer: 0
+  m_Name: Spawnpoint (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &919202345135894926
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3351823756936801480}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.62768644, y: 0.3255914, z: 0.3255914, w: -0.62768644}
+  m_LocalPosition: {x: 108.27, y: 47.8, z: -235.85}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8045239089200592190}
+  m_LocalEulerAnglesHint: {x: -90, y: 305.167, z: 0}
+--- !u!1 &6028046615681583483
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7456497053031242134}
+  m_Layer: 0
+  m_Name: Spawnpoint (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7456497053031242134
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6028046615681583483}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.17677054, y: 0.68465483, z: 0.68465483, w: -0.17677054}
+  m_LocalPosition: {x: 138.8, y: 25.25, z: -23.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8045239089200592190}
+  m_LocalEulerAnglesHint: {x: -90, y: 208.954, z: 0}
+--- !u!1 &8199816205208166499
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8045239089200592190}
+  - component: {fileID: 5858835116861853325}
+  m_Layer: 0
+  m_Name: CarSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8045239089200592190
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8199816205208166499}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
+  m_Children:
+  - {fileID: 5653437510955934419}
+  - {fileID: 7456497053031242134}
+  - {fileID: 919202345135894926}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5858835116861853325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8199816205208166499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a94cd11701ebb34d86980b408cd2147, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  carPrefabs:
+  - {fileID: 5466600460509891045, guid: 9c6dc3e44079e3a4bb5e73d700652319, type: 3}
+  - {fileID: 2237401377053421077, guid: 91a0f28c5c1e4864b825748edf1fabf8, type: 3}
+  - {fileID: 7268692557092982117, guid: ea0526043f3aed34d8e484118b91ea9d, type: 3}
+  - {fileID: 3448901331400769521, guid: 5b2a4533719ca974f99a6dbe0551bfed, type: 3}
+  - {fileID: 8707695339116992204, guid: cc8a7a2f19520f845a68dce8bb72e0e7, type: 3}
+  minSpeed: 5
+  maxSpeed: 8
+  spawnHeight: 0
+  spawnPoints:
+  - {fileID: 5653437510955934419}
+  - {fileID: 7456497053031242134}
+  - {fileID: 919202345135894926}
+  spawnRate: 1
+  maxCars: 30
+  spawnRadius: 0
