@@ -1,6 +1,6 @@
+
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.InputSystem.XR;
 
 public class EnemyAI : MonoBehaviour
 {
@@ -19,10 +19,14 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] private float attackRadius;
     [SerializeField] private Transform attackPoint;
     [SerializeField] private LayerMask playerLayer;
+    [SerializeField] private AudioClip AttackClip;
+    [Range(0f, 1f)][SerializeField] private float AttackAudioVolume;
 
     [Header("ѕатрулирование")]
     [SerializeField] private Transform[] patrolPoints;
     private int currentPatrolIndex = 0;
+
+    
 
     private Transform player; // —сылка на игрока
     private NavMeshAgent agent;
@@ -91,6 +95,7 @@ public class EnemyAI : MonoBehaviour
     {
         var v = Physics.CheckSphere(attackPoint.position,
                 attackRadius, playerLayer, QueryTriggerInteraction.Ignore);
+        AudioSource.PlayClipAtPoint(AttackClip, attackPoint.position, AttackAudioVolume);
         if (v){
             GameManager.instance.PlayerDeath();
         }

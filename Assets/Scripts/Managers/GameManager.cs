@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+    private bool isPlayerAlive = true;
 
     private void Awake()
     {
@@ -19,10 +20,16 @@ public class GameManager : MonoBehaviour
     }
     public void PlayerDeath()
     {
-        ReloadScene();
+        if (isPlayerAlive)
+        {
+            isPlayerAlive = false;
+            InGameUIManager.instance.AppearDeadScreen();
+            Cursor.lockState = CursorLockMode.None;
+        }
     }
-    private void ReloadScene()
+    
+    public void NextLevel()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
     }
 }
