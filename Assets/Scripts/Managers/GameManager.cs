@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
     }
     public void PlayerDeath()
     {
-        
+        ReloadScene();
     }
     private void ReloadScene()
     {
