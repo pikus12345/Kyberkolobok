@@ -286,15 +286,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoveSpeed: 6
-  SprintSpeed: 6
+  SprintSpeed: 10
   RotationSmoothTime: 0.12
-  SpeedChangeRate: 6
+  SpeedChangeRate: 5
   LandingAudioClip: {fileID: 8300000, guid: ff697d3070687ce4583faa0561a145a2, type: 3}
-  FootstepAudioClips:
-  - {fileID: 8300000, guid: 72f526a6a9890f643a88e85a61c86c8a, type: 3}
+  FootstepAudioClips: []
   FootstepAudioVolume: 0.5
   JumpHeight: 2
-  Gravity: -15
+  Gravity: -23
   JumpTimeout: 0
   FallTimeout: 0
   Grounded: 1
@@ -440,7 +439,7 @@ MonoBehaviour:
   jump: 0
   sprint: 0
   analogMovement: 1
-  cursorLocked: 1
+  cursorLocked: 0
   cursorInputForLook: 1
 --- !u!114 &6289967472354027491
 MonoBehaviour:
@@ -454,7 +453,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82df424cfef537742ad5af8e3dadee99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movespeed: -20
+  movespeed: -2.7
   rotatingObject: {fileID: 7077638712546774510}
 --- !u!95 &2838029920332808553
 Animator:
@@ -550,3 +549,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46d66109fad755b47b97301763685edf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AbyssDeathAudioClip: {fileID: 8300000, guid: 86600b39589a14c4dbdbf3c9125ab87c, type: 3}
+  AbyssDeathAudioVolume: 1

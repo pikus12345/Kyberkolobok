@@ -315,7 +315,7 @@ namespace StarterAssets
                 if ((_input.jump && _jumpTimeoutDelta <= 0.0f) || ForceJump)
                 {
                     float targetJumpHeight = JumpHeight;
-                    if (ForceJump) targetJumpHeight *= 10;
+                    if (ForceJump) targetJumpHeight *= 15;
                     
                     _verticalVelocity = Mathf.Sqrt(targetJumpHeight * -2f * Gravity);
 

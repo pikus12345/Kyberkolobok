@@ -142,7 +142,7 @@ public class EnemyAI : MonoBehaviour
         if (FootstepAudioClips.Length > 0)
         {
             var index = Random.Range(0, FootstepAudioClips.Length);
-            AudioSource.PlayClipAtPoint(FootstepAudioClips[index], transform.position, FootstepAudioVolume);
+            SoundPlayer.PlaySoundWithMixer(FootstepAudioClips[index], transform.position, FootstepAudioVolume);
         }
     }
 }
