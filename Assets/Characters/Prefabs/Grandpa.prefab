@@ -999,7 +999,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1008,7 +1008,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.3
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
@@ -1061,7 +1061,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6124134329790918468}
   serializedVersion: 5
-  m_Mass: 10000
+  m_Mass: 100000000
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -1076,7 +1076,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 1
@@ -1117,8 +1117,8 @@ MonoBehaviour:
   visionRadius: 8
   chaseSpeed: 3
   patrolSpeed: 2
-  stoppingDistance: 1
-  SpeedChangeRate: 10
+  stoppingDistance: 0.7
+  SpeedChangeRate: 20
   FootstepAudioClips:
   - {fileID: 8300000, guid: 5ba7c252d584f9d419ad5e3d575ef73d, type: 3}
   - {fileID: 8300000, guid: 552668258de547e4db753c3e44612fd2, type: 3}
@@ -1134,7 +1134,10 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 64
-  AttackClips: []
+  AttackClips:
+  - {fileID: 8300000, guid: fcf01561d3a15534dbbe2a4dac1da36a, type: 3}
+  - {fileID: 8300000, guid: 9ee33f9ffbaebd14eaa013203582739e, type: 3}
+  - {fileID: 8300000, guid: ee36890a7d1ca4d458603af637cddb54, type: 3}
   AttackAudioVolume: 1
   patrolPoints:
   - {fileID: 0}

@@ -258,7 +258,7 @@ CharacterController:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 128
@@ -307,6 +307,8 @@ MonoBehaviour:
   BottomClamp: -30
   CameraAngleOverride: 0
   LockCameraPosition: 0
+  jumpClip: {fileID: 8300000, guid: 1c9bba643731b3b49aa9781a73aa7cce, type: 3}
+  forceJumpClip: {fileID: 8300000, guid: 2c997bb08953ae842b2c530798ad41ed, type: 3}
 --- !u!114 &6531800985395019456
 MonoBehaviour:
   m_ObjectHideFlags: 0

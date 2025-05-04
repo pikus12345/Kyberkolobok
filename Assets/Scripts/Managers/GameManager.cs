@@ -31,11 +31,13 @@ public class GameManager : MonoBehaviour
     
     public void NextLevel()
     {
+        Time.timeScale = 1f;
         AdvancedLoadingScreen.targetSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
         SceneManager.LoadScene("LoadingScene");
     }
     public void ReloadLevel()
     {
+        Time.timeScale = 1f;
         AdvancedLoadingScreen.targetSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene("LoadingScene");
     }
