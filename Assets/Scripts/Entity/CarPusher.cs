@@ -13,10 +13,16 @@ public class CarPusher : MonoBehaviour
     }
     private void Update()
     {
-        rb.AddForce(-transform.up*carPushStrengh, forceMode);
-        var velmag = rb.linearVelocity.magnitude;
-        audioSource.pitch = velmag / 50f;
-        audioSource.volume = velmag / 50f;
+        if(rb != null)
+        {
+            rb.AddForce(-transform.up * carPushStrengh, forceMode);
+        }
+        if(audioSource != null)
+        {
+            var velmag = rb.linearVelocity.magnitude;
+            audioSource.pitch = velmag / 50f;
+            audioSource.volume = velmag / 50f;
+        }
     }
     private void OnCollisionEnter(Collision collision)
     {

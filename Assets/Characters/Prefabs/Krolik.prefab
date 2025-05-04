@@ -42577,16 +42577,52 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6124134329790918468, guid: 17d85847d1e393943aadeb7a94709214, type: 3}
       propertyPath: m_Name
-      value: Grandpa Variant
+      value: Krolik
       objectReference: {fileID: 0}
     - target: {fileID: 6255327462211890883, guid: 17d85847d1e393943aadeb7a94709214, type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 236ad2b044c4fdd46949ce5193227b0b, type: 2}
     - target: {fileID: 7475469782601743513, guid: 17d85847d1e393943aadeb7a94709214, type: 3}
+      propertyPath: chaseSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475469782601743513, guid: 17d85847d1e393943aadeb7a94709214, type: 3}
       propertyPath: attackPoint
       value: 
+      objectReference: {fileID: 2194085892153699095}
+    - target: {fileID: 7475469782601743513, guid: 17d85847d1e393943aadeb7a94709214, type: 3}
+      propertyPath: patrolSpeed
+      value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 7475469782601743513, guid: 17d85847d1e393943aadeb7a94709214, type: 3}
+      propertyPath: attackRadius
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475469782601743513, guid: 17d85847d1e393943aadeb7a94709214, type: 3}
+      propertyPath: stoppingDistance
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475469782601743513, guid: 17d85847d1e393943aadeb7a94709214, type: 3}
+      propertyPath: AttackClips.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475469782601743513, guid: 17d85847d1e393943aadeb7a94709214, type: 3}
+      propertyPath: 'AttackClips.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 7d8ea4f0be863cb4ab783dfb10c69e9a, type: 3}
+    - target: {fileID: 7475469782601743513, guid: 17d85847d1e393943aadeb7a94709214, type: 3}
+      propertyPath: 'AttackClips.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 4276d306294406340a1433bf8aaf6038, type: 3}
+    - target: {fileID: 7475469782601743513, guid: 17d85847d1e393943aadeb7a94709214, type: 3}
+      propertyPath: 'AttackClips.Array.data[2]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 25093327f8349e94eb2db1dc07d70881, type: 3}
+    - target: {fileID: 7475469782601743513, guid: 17d85847d1e393943aadeb7a94709214, type: 3}
+      propertyPath: 'AttackClips.Array.data[3]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 01bcef6846ef9854eb7d3c480a8c377a, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 2680151862105096127, guid: 17d85847d1e393943aadeb7a94709214, type: 3}

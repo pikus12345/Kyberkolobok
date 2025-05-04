@@ -51,12 +51,11 @@ public class EnemyAI : MonoBehaviour
     private void Update()
     {
         float targetSpeed = 0;
+        if (animator.GetBool("Attack")) return;
         // Проверяем, виден ли игрок
         if (CanSeePlayer())
         {
             // Преследуем игрока
-            if (!animator.GetBool("Attack"))
-            {
                 isChasing = true;
                 targetSpeed = chaseSpeed;
                 agent.SetDestination(player.position);
@@ -66,7 +65,7 @@ public class EnemyAI : MonoBehaviour
                     agent.isStopped = true;
                     Attack();
                 }
-            }
+
         }
         else
         {
