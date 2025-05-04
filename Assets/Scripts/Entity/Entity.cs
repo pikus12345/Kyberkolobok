@@ -52,6 +52,7 @@ public class Entity : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
+        Debug.Log("ÊÎËËÈÇÈÎÍ");
         if (collision.collider != null && collision.collider.CompareTag("Player") && isAlive)
         {
             if(collision.collider.transform.position.y > transform.position.y && isJumpDamaging)

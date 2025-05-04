@@ -130,6 +130,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelExit Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4436530514988254516, guid: 864dfd63f7394df409ce814c0302e2de, type: 3}
+      propertyPath: text
+      value: NEXTLEVEL
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 466796082523847253, guid: 864dfd63f7394df409ce814c0302e2de, type: 3}

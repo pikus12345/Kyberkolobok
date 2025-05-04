@@ -75,6 +75,8 @@ namespace StarterAssets
 
         [Tooltip("For locking the camera position on all axis")]
         public bool LockCameraPosition = false;
+        [SerializeField] private AudioClip jumpClip;
+        [SerializeField]  private AudioClip forceJumpClip;
 
         // cinemachine
         private float _cinemachineTargetYaw;
@@ -315,9 +317,18 @@ namespace StarterAssets
                 if ((_input.jump && _jumpTimeoutDelta <= 0.0f) || ForceJump)
                 {
                     float targetJumpHeight = JumpHeight;
-                    if (ForceJump) targetJumpHeight *= 15;
-                    
-                    _verticalVelocity = Mathf.Sqrt(targetJumpHeight * -2f * Gravity);
+                    if (ForceJump)
+                    {
+                        targetJumpHeight *= 15;
+                        SoundPlayer.PlaySoundWithMixer(forceJumpClip, transform.position, 1f);
+                    }
+                    else
+                    {
+                        //SoundPlayer.PlaySoundWithMixer(jumpClip, transform.position, 1f);
+                    }
+
+
+                        _verticalVelocity = Mathf.Sqrt(targetJumpHeight * -2f * Gravity);
 
                     // update animator if using character
                     if (_hasAnimator)
