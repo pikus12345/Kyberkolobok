@@ -22,6 +22,6 @@ public class PlayerRotationAround : MonoBehaviour
             v = 1;
         }
         v *= movespeed;
-        rotatingObject.Rotate(new Vector3(v, 0, 0) * Time.deltaTime * 30, Space.Self);
+        rotatingObject.Rotate(new Vector3(v, 0, 0) * Time.deltaTime * 30 * GetComponent<Animator>().GetFloat("Speed"), Space.Self);
     }
 }

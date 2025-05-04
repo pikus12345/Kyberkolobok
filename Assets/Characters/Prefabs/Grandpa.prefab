@@ -1061,7 +1061,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6124134329790918468}
   serializedVersion: 5
-  m_Mass: 1
+  m_Mass: 10000
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -1134,6 +1134,8 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 64
+  AttackClip: {fileID: 8300000, guid: 27ccce874c9f4f245b805b236a29bec5, type: 3}
+  AttackAudioVolume: 1
   patrolPoints:
   - {fileID: 0}
   - {fileID: 0}

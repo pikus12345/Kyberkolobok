@@ -4,10 +4,12 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    private bool isPlayerAlive = true;
+    public bool isPlayerAlive = true;
 
     private void Awake()
     {
+        Time.timeScale = 1f;
+        Cursor.lockState = CursorLockMode.Locked;
         if (instance != null && instance != this)
         {
             Destroy(gameObject);
@@ -15,7 +17,6 @@ public class GameManager : MonoBehaviour
         else
         {
             instance = this;
-            DontDestroyOnLoad(gameObject);
         }
     }
     public void PlayerDeath()
@@ -30,6 +31,7 @@ public class GameManager : MonoBehaviour
     
     public void NextLevel()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+        AdvancedLoadingScreen.targetSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
+        SceneManager.LoadScene("LoadingScene");
     }
 }
