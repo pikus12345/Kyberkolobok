@@ -31,7 +31,8 @@ public class TimeSlowdown : MonoBehaviour
 
             foreach (AudioSource src in allAudioSources)
             {
-                src.pitch = Time.timeScale;
+                try { src.pitch = Time.timeScale; } catch { }
+                
             }
 
             if (progress >= 1f)

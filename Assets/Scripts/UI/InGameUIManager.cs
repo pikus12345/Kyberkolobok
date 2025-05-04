@@ -4,7 +4,9 @@ using UnityEngine.SceneManagement;
 public class InGameUIManager : MonoBehaviour
 {
     [SerializeField] private Animator deadScreenAnimator;
+    [SerializeField] private AudioSource deadScreenAudioSource;
     public static InGameUIManager instance;
+
 
     private void Awake()
     {
@@ -23,11 +25,16 @@ public class InGameUIManager : MonoBehaviour
 
     public void AppearDeadScreen()
     {
+        
         deadScreenAnimator.SetTrigger("Appear");
+    }
+    private void PlayDeadScreenMusic()
+    {
+        deadScreenAudioSource.Play();
     }
     public void ReloadScene()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        GameManager.instance.ReloadLevel();
     }
     public void GoToMenu()
     {
