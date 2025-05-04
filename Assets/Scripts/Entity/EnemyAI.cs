@@ -19,7 +19,7 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] private float attackRadius;
     [SerializeField] private Transform attackPoint;
     [SerializeField] private LayerMask playerLayer;
-    [SerializeField] private AudioClip AttackClip;
+    [SerializeField] private AudioClip[] AttackClips;
     [Range(0f, 1f)][SerializeField] private float AttackAudioVolume;
 
     [Header("Патрулирование")]
@@ -55,20 +55,27 @@ public class EnemyAI : MonoBehaviour
         if (CanSeePlayer())
         {
             // Преследуем игрока
-            isChasing = true;
-            targetSpeed = chaseSpeed;
-            agent.SetDestination(player.position);
-            if (agent.remainingDistance <= stoppingDistance)
+            if (!animator.GetBool("Attack"))
             {
-                Attack();
+                isChasing = true;
+                targetSpeed = chaseSpeed;
+                agent.SetDestination(player.position);
+                agent.isStopped = false;
+                if (agent.remainingDistance <= stoppingDistance)
+                {
+                    agent.isStopped = true;
+                    Attack();
+                }
             }
         }
         else
         {
             // Возвращаемся на стартовую позицию
+            AttackEnded();
             isChasing = false;
             targetSpeed = patrolSpeed;
             agent.SetDestination(patrolPoints[currentPatrolIndex].position);
+            agent.isStopped = false;
             if (agent.remainingDistance < 0.5f)
                 currentPatrolIndex = (currentPatrolIndex + 1) % patrolPoints.Length;
         }
@@ -89,16 +96,27 @@ public class EnemyAI : MonoBehaviour
     }
     private void Attack()
     {
-        animator.SetTrigger("Attack");
+        animator.SetBool("Attack", true);
+    }
+    private void AttackSound()
+    {
+        if (AttackClips.Length > 0)
+        {
+            var index = Random.Range(0, AttackClips.Length);
+            SoundPlayer.PlaySoundWithMixer(AttackClips[index], attackPoint.position, AttackAudioVolume);
+        }
     }
     private void OnAttack()
     {
         var v = Physics.CheckSphere(attackPoint.position,
                 attackRadius, playerLayer, QueryTriggerInteraction.Ignore);
-        AudioSource.PlayClipAtPoint(AttackClip, attackPoint.position, AttackAudioVolume);
         if (v){
             GameManager.instance.PlayerDeath();
         }
+    }
+    public void AttackEnded()
+    {
+        animator.SetBool("Attack", false);
     }
 
     // Проверка видимости игрока
@@ -130,12 +148,16 @@ public class EnemyAI : MonoBehaviour
     // Визуализация радиуса в редакторе
     private void OnDrawGizmosSelected()
     {
-        Gizmos.color = Color.red;
+        Gizmos.color = new Color(1f,0,0, 0.5f);
         Gizmos.DrawWireSphere(transform.position, visionRadius);
 
-        Gizmos.DrawSphere(
+        if (attackPoint)
+        {
+            Gizmos.DrawSphere(
                 attackPoint.position,
                 attackRadius);
+        }
+        
     }
     private void OnFootstep()
     {

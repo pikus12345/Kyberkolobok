@@ -34,4 +34,9 @@ public class GameManager : MonoBehaviour
         AdvancedLoadingScreen.targetSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
         SceneManager.LoadScene("LoadingScene");
     }
+    public void ReloadLevel()
+    {
+        AdvancedLoadingScreen.targetSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene("LoadingScene");
+    }
 }
