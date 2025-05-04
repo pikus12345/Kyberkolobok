@@ -2156,6 +2156,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WATERTANK
       objectReference: {fileID: 0}
+    - target: {fileID: 7484841394836509632, guid: df59bfb31344ff34e98444d4d272d5d6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
