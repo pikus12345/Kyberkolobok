@@ -19,7 +19,10 @@ public class MessageTriggerListener : MonoBehaviour
                 return;
             }
             MessageManager.instance.CreateMessage(mt.text);
-            
+            if (mt.DestroyAfterUse)
+            {
+                Destroy(mt.gameObject);
+            }
         }
     }
 }
